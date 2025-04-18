@@ -43,12 +43,12 @@ INSTALLED_APPS = [
     'corsheaders',  # Für Frontend-Integration
 
     # Project apps
-    #'core',
-    #'contacts',
-    #'pipelines',
-    #'teams',
-    #'ai_assistant',
-    #'api',
+    'core',
+    'contacts',
+    'pipelines',
+    'teams',
+    'ai_assistant',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -88,8 +88,12 @@ WSGI_APPLICATION = 'DjangoProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'crm_mlm_db',
+        'USER': 'crm_user',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',  # oder IP-Adresse des DB-Servers
+        'PORT': '5432',
     }
 }
 
